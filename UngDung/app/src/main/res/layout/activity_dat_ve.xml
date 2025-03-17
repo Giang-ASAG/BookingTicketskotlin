@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ModeDark"
+    tools:context=".activity.DatVeActivity">
+
+    <TextView
+        android:id="@+id/tvdiachi"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/opensans"
+        android:gravity="end"
+        android:text="Địa chỉ"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnLich"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/container_inputs"
+        android:fontFamily="@font/opensans"
+        android:padding="10dp"
+        android:spinnerMode="dialog"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdiachi" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvlich"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnLich" />
+
+    <TextView
+        android:id="@+id/tvghe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/opensans"
+        android:text="Ghế"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvlich" />
+
+    <TextView
+        android:id="@+id/tvmanchieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Màn chiếu"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvghe" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvghetrong"
+        app:layout_constraintEnd_toStartOf="@+id/spacer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvmanchieu" />
+
+    <View
+        android:id="@+id/spacer"
+        android:layout_width="16dp"
+        android:layout_height="0pt"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewLeft"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerViewRight"
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewLeft"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewLeft" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewLeft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spacer"
+        app:layout_constraintTop_toTopOf="@+id/recyclerViewLeft" />
+
+    <Button
+        android:id="@+id/btnThanhToan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/colorCam"
+        android:fontFamily="@font/opensans"
+        android:padding="10dp"
+        android:text="Thanh toán"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvghetrong"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/seats_empty"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnThanhToan"
+        app:layout_constraintStart_toStartOf="@+id/btnThanhToan"
+        app:layout_constraintTop_toBottomOf="@+id/spacer" />
+
+    <TextView
+        android:id="@+id/tvTrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="Trống"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvghetrong"
+        app:layout_constraintEnd_toStartOf="@+id/tvghedangchon"
+        app:layout_constraintStart_toEndOf="@+id/tvghetrong"
+        app:layout_constraintTop_toTopOf="@+id/tvghetrong" />
+
+    <TextView
+        android:id="@+id/tvghedangchon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/seats_selected"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvghetrong"
+        app:layout_constraintEnd_toStartOf="@+id/tvdangchon"
+        app:layout_constraintStart_toEndOf="@+id/tvTrong"
+        app:layout_constraintTop_toTopOf="@+id/tvghetrong" />
+
+    <TextView
+        android:id="@+id/tvdangchon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="Đang chọn"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvghedangchon"
+        app:layout_constraintEnd_toStartOf="@+id/tvghedadat"
+        app:layout_constraintStart_toEndOf="@+id/tvghedangchon"
+        app:layout_constraintTop_toTopOf="@+id/tvghedangchon" />
+
+    <TextView
+        android:id="@+id/tvghedadat"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/seats_booked"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvghetrong"
+        app:layout_constraintEnd_toStartOf="@+id/tvdadat"
+        app:layout_constraintStart_toEndOf="@+id/tvdangchon"
+        app:layout_constraintTop_toTopOf="@+id/tvghetrong" />
+
+    <TextView
+        android:id="@+id/tvdadat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="Đã đặt"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvghedangchon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvghedadat"
+        app:layout_constraintTop_toTopOf="@+id/tvghedangchon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

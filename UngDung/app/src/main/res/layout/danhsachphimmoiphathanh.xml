@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvKhoangcach"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:textSize="2sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgview"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:src="@drawable/arcane"
+        app:layout_constraintTop_toBottomOf="@+id/tvKhoangcach"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtenPhim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="Arcane 2"
+        android:textColor="@color/colorWhite"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgview"
+        app:layout_constraintTop_toTopOf="@+id/imgview" />
+
+    <TextView
+        android:id="@+id/tvNgayRaMat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="12/10/2024"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvThoiLuong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvtenPhim"
+        app:layout_constraintTop_toBottomOf="@+id/tvtenPhim" />
+
+    <TextView
+        android:id="@+id/tvThoiLuong"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="180 phut"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTheLoai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvtenPhim"
+        app:layout_constraintTop_toBottomOf="@+id/tvNgayRaMat" />
+
+    <TextView
+        android:id="@+id/tvTheLoai"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="Hanh dong, kinh di"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvtenPhim" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

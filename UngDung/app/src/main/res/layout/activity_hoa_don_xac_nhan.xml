@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ModeDark"
+    tools:context=".activity.HoaDonXacNhanActivity">
+
+    <ImageView
+        android:id="@+id/imgvHD"
+        android:layout_width="200dp"
+        android:layout_height="900px"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/arcane"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTieuDePhim_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:gravity="center"
+        android:text="ARCANE"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvTieuDeRap_HD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgvHD"
+        app:layout_constraintTop_toTopOf="@+id/imgvHD" />
+
+    <TextView
+        android:id="@+id/tvTieuDeRap_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/opensans"
+        android:gravity="center"
+        android:text="Ten rap phim"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTieuDeNgayChieuPhim_HD"
+        app:layout_constraintEnd_toEndOf="@+id/tvTieuDePhim_HD"
+        app:layout_constraintStart_toStartOf="@+id/tvTieuDePhim_HD" />
+
+    <TextView
+        android:id="@+id/tvTieuDeNgayChieuPhim_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:gravity="center"
+        android:text="4/12/2024"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgvHD"
+        app:layout_constraintEnd_toEndOf="@+id/tvTieuDePhim_HD"
+        app:layout_constraintStart_toStartOf="@+id/tvTieuDePhim_HD" />
+
+    <TextView
+        android:id="@+id/tvTieuDeMa_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/opensans"
+        android:padding="15dp"
+        android:text="Mã hóa đơn"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgvHD" />
+
+    <TextView
+        android:id="@+id/tvMa_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:paddingStart="15dp"
+        android:text="11111111111111"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintStart_toStartOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintTop_toBottomOf="@+id/tvTieuDeMa_HD" />
+
+    <TextView
+        android:id="@+id/tvTieuDeGhe_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:padding="10dp"
+        android:text="Ghế"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintStart_toStartOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintTop_toBottomOf="@+id/tvMa_HD" />
+
+    <TextView
+        android:id="@+id/tvGhe_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:paddingStart="15dp"
+        android:text="G3 G4 G5 G6 G7 G8 G9"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintStart_toStartOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintTop_toBottomOf="@+id/tvTieuDeGhe_HD" />
+
+    <TextView
+        android:id="@+id/tvTieuDeTongTien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:padding="15dp"
+        android:text="Tổng tiền"
+        android:textColor="@color/colorWhite"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnThanhToan_HD"
+        app:layout_constraintEnd_toEndOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintStart_toStartOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintTop_toBottomOf="@+id/tvGhe_HD"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <TextView
+        android:id="@+id/tvTongTien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:paddingStart="15dp"
+        android:text="1.000.000đ"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintStart_toStartOf="@id/tvTieuDeMa_HD"
+        app:layout_constraintTop_toBottomOf="@+id/tvTieuDeTongTien" />
+
+    <Button
+        android:id="@+id/btnThanhToan_HD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/colorCam"
+        android:fontFamily="@font/opensans"
+        android:padding="10dp"
+        android:text="Thanh toán"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
